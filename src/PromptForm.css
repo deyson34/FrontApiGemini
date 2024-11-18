@@ -1,0 +1,27 @@
+/* PromptForm.css */
+div {
+    margin: 20px;
+  }
+  
+  input {
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: gray;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  h3 {
+    color: green;
+  }
+  
