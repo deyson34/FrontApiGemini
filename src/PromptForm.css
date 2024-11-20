@@ -1,27 +1,143 @@
 /* PromptForm.css */
-div {
-    margin: 20px;
-  }
-  
-  input {
-    padding: 8px;
-    margin-right: 10px;
-  }
-  
-  button {
-    padding: 8px 16px;
-    cursor: pointer;
-  }
-  
-  button:disabled {
-    background-color: gray;
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
-  h3 {
-    color: green;
-  }
-  
+
+/* Contenedor principal */
+.app {
+  height: 100vh;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Establecer la altura del Row al 100% del viewport */
+.app .row {
+  height: 100%;
+}
+
+/* Panel izquierdo donde aparece el nombre */
+.left-panel {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 20px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.options-menu {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.additional-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Panel de chat */
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Área de conversación */
+.conversation {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: calc(100% - 80px); /* Ajusta la altura para dejar espacio para el formulario de entrada */
+}
+
+/* Contenedor de cada mensaje */
+.message-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Estilo de los mensajes del usuario */
+.user-msg {
+  max-width: 75%;
+  padding: 14px;
+  border-radius: 15px;
+  margin-left: auto;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los mensajes de Gemini (IA) */
+.gemini-msg {
+  max-width: 75%;
+  padding: 14px;
+  border-radius: 15px;
+  margin-right: auto;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del formulario de entrada */
+.send-prompt {
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* Ajusta la altura del formulario de entrada */
+}
+
+/* Estilos del campo de entrada */
+.send-prompt .form-control {
+  padding: 14px 20px;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1.1em;
+  width: 80%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.send-prompt .form-control:focus {
+  border-color: #4a4a4a;
+  outline: none;
+}
+
+/* Estilos del botón */
+.send-prompt .btn-primary {
+  padding: 14px 20px;
+  background: #4a4a4a;
+  color: white;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.send-prompt .btn-primary:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+.send-prompt .btn-primary:active {
+  transform: scale(0.98);
+}
