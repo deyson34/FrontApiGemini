@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [messages, setMessages] = useState([]);
-
+  
   const handleResponse = (newMessage) => {
     setMessages([...messages, newMessage]);
   };
